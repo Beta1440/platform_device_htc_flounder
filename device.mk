@@ -187,9 +187,13 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
 
     e2fsck fsck.f2fs mkfs.f2fs
 
+=======
+    e2fsck fsck.f2fs mkfs.f2fs
+>>>>>>> 03190ca... Enable F2FS
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
