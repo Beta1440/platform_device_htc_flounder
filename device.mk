@@ -31,7 +31,7 @@ LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-$(warning "USING F2FS for userdata")
+#$(warning "USING F2FS for userdata")
 
 # This ensures the needed build tools are available.
 # TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
@@ -43,7 +43,6 @@ endif
 TARGET_USERIMAGES_USE_F2FS := true
 
 LOCAL_FSTAB := $(LOCAL_PATH)/fstab.flounder
-
 
 TARGET_RECOVERY_FSTAB = $(LOCAL_FSTAB)
 
@@ -187,13 +186,8 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-
+    e2fsck fsck.f2fs mkfs.f2fs \
     e2fsck fsck.f2fs mkfs.f2fs
-
-=======
-    e2fsck fsck.f2fs mkfs.f2fs
->>>>>>> 03190ca... Enable F2FS
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
